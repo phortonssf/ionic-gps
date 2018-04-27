@@ -17,6 +17,6 @@ exports.handler = function(event, context, callback) {
         headers: {
             'Access-Control-Allow-Origin': '*',
         },
-        body: JSON.stringify({ word: randomWords[randomNumber] }),
+        body: JSON.stringify("word"),
     });
 };
