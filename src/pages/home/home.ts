@@ -27,7 +27,7 @@ export class HomePage {
   async lambda(){
   let result = await fetch('/.netlify/functions/random')
   console.log(result, "1st")
-  let x =   result.json()
+  let x =   result.json().then(json => json);
   console.log(x, "2nd")
   }
 
