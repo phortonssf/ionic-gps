@@ -9,6 +9,8 @@ export class HomePage {
 
   constructor(public navCtrl: NavController, private geolocation: Geolocation) {
      console.log("okay", this.geolocation)
+    
+
      this.geolocation.getCurrentPosition().then((resp) => {
          console.log(resp)
      }).catch((error) => {
@@ -22,6 +24,9 @@ export class HomePage {
       // data.coords.longitude
      });
   }
-
+  lambda(){
+    fetch('/.netlify/functions/hello')
+      .then(response => console.log(response.json()))
+  }
 
 }
