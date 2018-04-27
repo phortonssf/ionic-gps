@@ -24,9 +24,11 @@ export class HomePage {
       // data.coords.longitude
      });
   }
-  lambda(){
-    fetch('/.netlify/functions/random')
-      .then(response => console.log(response.json(), "asdf"))
+  async lambda(){
+  let result = await fetch('/.netlify/functions/random')
+  console.log(result, "1st")
+  let x =   result.json()
+  console.log(x, "2nd")
   }
 
 }
