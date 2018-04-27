@@ -25,10 +25,10 @@ export class HomePage {
      });
   }
   async lambda(){
-  let result = await fetch('/.netlify/functions/random')
-  console.log(result, "1st")
-  let x =   result.json().then(json => json);
-  console.log(x, "2nd")
+    let result = await fetch('/.netlify/functions/random')
+    console.log(result, "1st")
+    let x = await result.json()
+    console.log(x[0], "2nd")
   }
 
 }
