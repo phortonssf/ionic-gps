@@ -25,7 +25,7 @@ export class HomePage {
      });
   }
   lambda(){
-    fetch('/.netlify/functions/hello')
+    fetch('/.netlify/functions/random')
       .then(response => console.log(response.json()))
   }
 
