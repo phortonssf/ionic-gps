@@ -26,7 +26,7 @@ export class HomePage {
   }
   lambda(){
     fetch('/.netlify/functions/random')
-      .then(response => console.log(response.json()))
+      .then(response => console.log(response.json(), "asdf"))
   }
 
 }
