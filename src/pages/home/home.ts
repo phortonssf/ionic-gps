@@ -40,7 +40,7 @@ export class HomePage {
 
  async lambda(){
   //await (await fetch('https://api.github.com')).json()
- let x = (await fetch('/.netlify/functions/random')).json()
+ let x = await (await fetch('/.netlify/functions/random')).json()
   console.log(x)
   }
 
