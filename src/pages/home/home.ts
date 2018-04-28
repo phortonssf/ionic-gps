@@ -1,13 +1,19 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Geolocation } from '@ionic-native/geolocation';
+import { UserService } from '../../app/http.services';
+
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
 export class HomePage {
 
-  constructor(public navCtrl: NavController, private geolocation: Geolocation) {
+  constructor(
+    public navCtrl: NavController, 
+    private geolocation: Geolocation,
+    private _user : UserService
+  ) {
      console.log("okay", this.geolocation)
     
 
@@ -32,10 +38,13 @@ export class HomePage {
   // }
 
 
- lambda(){
-  fetch('/.netlify/functions/random')
-    .catch(error => console.error('Error:', error))
-    .then(response => console.log(response.json(), "jj"));
+//  lambda(){
+//   fetch('/.netlify/functions/random')
+//     .catch(error => console.error('Error:', error))
+//     .then(response => console.log(response.json(), "jj"));
+//   }
+  lambda(){
+    this._user.goLambda()
   }
 
     
