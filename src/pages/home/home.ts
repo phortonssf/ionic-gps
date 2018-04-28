@@ -33,10 +33,10 @@ export class HomePage {
 
 
  lambda(){
-    fetch('/.netlify/functions/random')
+  fetch('/.netlify/functions/random')
     .catch(error => console.error('Error:', error))
-    .then(response => console.log(response, "jj"));
+    .then(response => console.log(response.json(), "jj"));
   }
 
-  
+    
 }
