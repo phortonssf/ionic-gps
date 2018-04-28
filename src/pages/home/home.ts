@@ -31,11 +31,11 @@ export class HomePage {
   //   console.log(x, "2nd")
   // }
 
-  
+
  lambda(){
     fetch('/.netlify/functions/random')
     .catch(error => console.error('Error:', error))
-    .then(response => console.log(response));
+    .then(response => console.log(response, "jj"));
   }
 
   
