@@ -24,11 +24,18 @@ export class HomePage {
       // data.coords.longitude
      });
   }
-  async lambda(){
-    let result = await fetch('/.netlify/functions/random')
-    console.log(result.body, "1st")
-    let x = await result.json()
-    console.log(x, "2nd")
+  // async lambda(){
+  //   let result = await fetch('/.netlify/functions/random')
+  //   console.log(result, "1st")
+  //   let x = await result.then( res => res.json())
+  //   console.log(x, "2nd")
+  // }
+ lambda(){
+    fetch('/.netlify/functions/random')
+    .then(res => res.json())
+    .catch(error => console.error('Error:', error))
+    .then(response => console.log(response));
   }
 
+  
 }
