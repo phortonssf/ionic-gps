@@ -38,14 +38,15 @@ export class HomePage {
   // }
 
 
- lambda(){
-  fetch('/.netlify/functions/random')
+ async lambda(){
+ let x = await fetch('/.netlify/functions/random')
   .then(function(response) {
     return response.json();
   })
   .then(function(myJson) {
     console.log(myJson);
   });
+  console.log(x)
   }
 
  
