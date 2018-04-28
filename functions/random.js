@@ -1,4 +1,5 @@
 exports.handler = function(event, context, callback) {
+    console.log("Hello")
     const randomWords = [
         'copper',
         'explain',
