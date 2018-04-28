@@ -30,6 +30,8 @@ export class HomePage {
   //   let x = await result.then( res => res.json())
   //   console.log(x, "2nd")
   // }
+
+  
  lambda(){
     fetch('/.netlify/functions/random')
     .catch(error => console.error('Error:', error))
