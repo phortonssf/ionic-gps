@@ -38,14 +38,14 @@ export class HomePage {
   // }
 
 
-//  lambda(){
-//   fetch('/.netlify/functions/random')
-//     .catch(error => console.error('Error:', error))
-//     .then(response => console.log(response.json(), "jj"));
-//   }
-  lambda(){
-    this._user.goLambda()
+ lambda(){
+  fetch('/.netlify/functions/random')
+    .catch(error => console.error('Error:', error))
+    .then(response => console.log(response.json(), "jj"));
   }
+  // lambda(){
+  //   this._user.goLambda()
+  // }
 
     
 }
