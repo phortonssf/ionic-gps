@@ -40,9 +40,16 @@ export class HomePage {
 
  lambda(){
   fetch('/.netlify/functions/random')
-    .catch(error => console.error('Error:', error))
-    .then(response => console.log(response, "jj"));
+  .then(function(response) {
+    return response.json();
+  })
+  .then(function(myJson) {
+    console.log(myJson);
+  });
   }
+
+ 
+
   // lambda(){
   //   this._user.goLambda()
   // }
